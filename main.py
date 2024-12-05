@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from typing import Dict, Callable
 from kivymd.app import MDApp
 from base64 import b64decode
