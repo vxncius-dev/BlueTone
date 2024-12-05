@@ -32,7 +32,7 @@ Follow the steps below to install and run BlueTone on your system.
 Clone the BlueTone repository to your local machine using Git:
 
 ```bash
-git clone https://github.com/yourusername/BlueTone.git
+git clone https://github.com/vxncius-dev/BlueTone.git
 cd BlueTone
 ```
 
