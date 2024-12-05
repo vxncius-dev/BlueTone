@@ -51,7 +51,7 @@ If the `xsct` tool is not already installed, BlueTone will attempt to install it
 To run BlueTone, simply execute the following command:
 
 ```bash
-python3 BlueTone.py
+python3 main.py
 ```
 
 Upon starting, the app will check if `xsct` is installed. If not, it will prompt you to install it. Once installed, the app will allow you to adjust the color temperature of your screen based on predefined settings.
@@ -68,7 +68,7 @@ After the installation, you can move the `xsct` tool to a global directory and c
 
 ```bash
 # Add this line to your .bashrc or .zshrc file
-alias BlueTone='python3 /path/to/BlueTone/BlueTone.py'
+alias BlueTone='python3 /path/to/BlueTone/main.py'
 
 # Reload the shell configuration
 source ~/.bashrc   # or source ~/.zshrc
