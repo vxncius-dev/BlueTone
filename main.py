@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 from typing import Dict, Callable
 from kivymd.app import MDApp
 from base64 import b64decode
@@ -69,7 +68,6 @@ class BlueToneApp(MDApp):
         if not self.verificar_xsct_instalado():
             self.mostrar_dialogo_instalacao()
         else:
-            self.criar_alias_e_mover_app()
             self.adicionar_lista_temperaturas(screen)
 
         return screen
@@ -278,36 +276,6 @@ class BlueToneApp(MDApp):
                 print(f"Erro ao ajustar temperatura: {e}")
 
         return callback
-    
-    def criar_alias_e_mover_app(self) -> None:
-        try:
-            senha = self.senha_input.text.strip()
-            if not senha:
-                print("Erro: Senha não fornecida.")
-                return
-
-            app_dir = path.abspath("BlueTone")
-            destino_global = "/usr/local/bin/BlueTone"
-
-            if path.exists(destino_global):
-                print("Diretório já existe, removendo...")
-                run(["sudo", "-S", "rm", "-rf", destino_global], input=senha, text=True, check=True)
-
-            print(f"Movendo o diretório {app_dir} para {destino_global}...")
-            run(["sudo", "-S", "mv", app_dir, destino_global], input=senha, text=True, check=True)
-
-            shell_config_file = path.expanduser("~/.bashrc") if path.exists(path.expanduser("~/.bashrc")) else path.expanduser("~/.zshrc")
-            alias_command = f"alias BlueTone='python3 {destino_global}/BlueTone.py'"
-
-            with open(shell_config_file, "a") as file:
-                file.write(f"\n# Alias para BlueTone\n{alias_command}\n")
-            
-            print(f"Alias criado com sucesso! Para carregar o alias, execute: source {shell_config_file}")
-
-        except CalledProcessError as e:
-            print(f"Erro ao mover o aplicativo ou criar o alias: {e}")
-            sys.exit(1)
-
 
 if __name__ == "__main__":
     BlueToneApp().run()
