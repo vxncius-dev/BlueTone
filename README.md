@@ -101,7 +101,7 @@ If you encounter issues with the tool or have any questions, feel free to open a
 
 ## Screenshots
 
-![BlueTone Main Screen](images/screenshot1.png)
+![image](https://github.com/user-attachments/assets/852921c6-73f0-43b0-8efb-4caa3b50a0d7)
 
 ## Troubleshooting
 
