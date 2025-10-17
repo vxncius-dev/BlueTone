@@ -112,12 +112,3 @@ If you encounter issues with the tool or have any questions, feel free to open a
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-- **Kivy** - For building the graphical user interface.
-- **KivyMD** - For providing Material Design components to enhance the interface.
-- **xsct** - For the screen color temperature adjustment tool.
-- **Python** - For enabling the development of cross-platform applications with ease.
-
-This README should provide all the necessary information to your users, making it easy for them to install, use, and troubleshoot your app.
